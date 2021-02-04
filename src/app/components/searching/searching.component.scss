@@ -1,0 +1,13 @@
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navbar-brand img {
+  height: 70px;
+}
+// phone
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 48px;
+  }
+}

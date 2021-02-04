@@ -1,0 +1,30 @@
+.magician-profile-small {
+    height: 10rem; 
+    object-fit: cover; 
+    width: 10rem; 
+    object-position: top;
+}
+.magician-profile-big {
+    height: 30rem; 
+    object-fit: cover; 
+    width: 18rem; 
+    object-position: top;
+}
+.modal-dialog .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+// pc
+@media (max-width: 480px) {
+    
+}
+// phone
+@media (max-width: 768px) {
+    .magician-profile-small {
+        height: 20rem;
+        width: 15rem;
+    }
+    h5 {
+        font-size: 20px;
+    }
+}

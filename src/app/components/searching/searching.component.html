@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">
+    <img class="d-inline-block align-top" src="../../../assets/img/scholl-magician-logo.png">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button routerLink="house/Gryffindor" class="btn btn-danger">
+          Gryffindor 
+          <span class="badge badge-light">
+            <app-counter-magicians  [house]="'Gryffindor'" [itsHouse]="true">
+            </app-counter-magicians>
+          </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button routerLink="house/Slytherin" type="button" class="btn btn-success">
+           Slytherin 
+           <span class="badge badge-light">
+             <app-counter-magicians  [house]="'Slytherin'" [itsHouse]="true">
+             </app-counter-magicians>
+           </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button routerLink="house/Hufflepuff" type="button" class="btn btn-warning">
+          Hufflepuff 
+          <span class="badge badge-light">
+            <app-counter-magicians  [house]="'Hufflepuff'" [itsHouse]="true">
+            </app-counter-magicians>
+          </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button routerLink="house/Ravenclaw" type="button"  class="btn btn-dark">
+          Ravenclaw 
+          <span class="badge badge-light">
+            <app-counter-magicians  [house]="'Ravenclaw'" [itsHouse]="true">
+            </app-counter-magicians>
+          </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button routerLink="staff" type="button" class="btn btn-outline-dark">
+          Staff 
+          <span class="badge badge-light">
+            <app-counter-magicians  [itsHouse]="false">
+            </app-counter-magicians>
+          </span>
+        </button>
+      </li>
+      <li class="nav-item">
+        <form class="form-inline my-2 my-lg-0" [formGroup]="search">
+          <input (focus)="dNall()" (blur)="vieAll()"  formControlName="searching" class="form-control mr-sm-2" type="search" placeholder="Name or LastName" aria-label="Search" spellcheck="false" autocomplete="none">
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>

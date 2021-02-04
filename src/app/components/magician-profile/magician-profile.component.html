@@ -1,0 +1,76 @@
+<div class="card-profile-simple mb-3 shadow grow" *ngIf="magician">
+  <div class="col-md-12" >
+    <div class="row g-0">
+      <div class="col-md-4 col-sm-12"> 
+        <img class="magician-profile-small" [src]="magician.image" [alt]="magician.name">
+      </div>
+      <div class="col-md-8 col-sm-12 px-5">
+        <div class="card-body">
+          <h5 class="card-title">{{magician.name}}</h5>
+                <span class="{{magician.house | housePipe}}">{{magician.house}}</span>
+                <button type="button" data-bs-toggle="modal" class="btn btn-magician btn-sm mt-1" (click)="viewFullProfile(magician)"> Show Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="modal  shadow fade" id="{{magician.name | clearSpaces}}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg card-profile-simple">
+      <div class="modal-content ">
+        <div class="col-md-12 mb-3">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="row">
+            <div class="col-md-4">
+              <img *ngIf="magician.image" class="magician-profile-big" [src]="magician.image" [alt]="magician.name">
+            </div>
+            <div class="col-md-8 p-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 class="card-title pl-2">{{magician.name}}</h2>
+                  </div>
+                  <div class="col-md-4">
+                    <ng-template [ngIf]="magician.house === 'Gryffindor'">
+                      <img width="40px" src="../../../assets/img/Gryffindor.png" >
+                    </ng-template>
+                    <ng-template [ngIf]="magician.house === 'Slytherin'">
+                      <img width="40px" src="../../../assets/img/Slytherin.png" >
+                    </ng-template>
+                    <ng-template [ngIf]="magician.house === 'Hufflepuff'">
+                      <img width="40px" src="../../../assets/img/Hufflepuff.png" >
+                    </ng-template>
+                    <ng-template [ngIf]="magician.house === 'Ravenclaw'">
+                      <img width="40px" src="../../../assets/img/Ravenclaw.png" >
+                    </ng-template>
+                  </div>
+                </div>
+                
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    
+                  <li class="list-group-item">
+                    <b>Species: </b>{{magician.species}} | <b>Gender: </b>{{magician.gender}}</li>
+                  <li class="list-group-item"><b>House: </b>{{magician.house}}</li>
+                  <li class="list-group-item"><b>BithDay: </b>{{magician.dateOfBirth}}</li>
+                  <li class="list-group-item"><b>Ancestry: </b>{{magician.ancestry}}</li>
+                  <li class="list-group-item"><b>Eye color: </b>{{magician.eyeColour}} | <b>Hair Color: </b> {{magician.hairColour}}</li>
+                  <li class="list-group-item"> <b>Actor: </b>{{magician.actor}} | 
+                    <ng-template [ngIf]="magician.alive">
+                      <span class="badge badge-info">live</span>
+                    </ng-template>
+                    <ng-template [ngIf]="!magician.alive">
+                      <span class="badge badge-dark">Die</span>
+                    </ng-template>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-modal [profile]="sendMagician">
+  </app-modal> -->

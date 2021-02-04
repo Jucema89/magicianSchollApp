@@ -1,0 +1,11 @@
+<div class="col-md-12 p-5">
+    <app-searching  (search)="handleSearch($event)"></app-searching>
+    <div class="row pt-5">
+        <app-magician-profile 
+        id="allMagicians" 
+        class="col-md-4" 
+        *ngFor="let magician of (allMagicians | async) | searching: (searchMagician | async)" 
+        [magician]="magician">
+        </app-magician-profile>
+    </div>
+</div>

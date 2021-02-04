@@ -1,0 +1,25 @@
+/*
+Variables of Magician School Theme
+*/
+
+// colors
+
+$color-primary: #9C27B0;
+$color-primary-light: #E1BEE7;
+$color-primary-dark: #7B1FA2;
+$color-text-primary: #212121;
+$color-text-secondary:#757575;
+$color-accent: #FFEB3B;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Montserrat:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+$fontTitle: 'Londrina Solid', cursive;
+$fontText: 'Montserrat', sans-serif;
+$font-size: (
+  "x-small": 10px,
+  "small": 12px,
+  "medium": 16px,
+  "big": 20px,
+);
+
+
